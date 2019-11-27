@@ -28,21 +28,21 @@ Las expresiones regulares son una secuencia de caracteres que conforma un patró
 
 En esta sección se van a analizar dos distintas páginas que hablen sobre las expresiones regulares.
 
-En la pagina [Rpubs]( http://rpubs.com/ydmarinb/429756) nos habla desde un inicio los puntos basicos y necesarios para entender lo que son las expresiones regulares mencionando que las expresiones regulares se contruyen utilizando los operadores unión, concatenación y clausira de kleene(operación que se aplica y representa el conjunto de las cadenas que se pueden formar).Tomando en cuenta los cuantificadores, la alternación, la agrupación, barra invertida, el signo de admiración, metacaracteres especiales;nos da ejemplos de como ir implementado en R y al final como reemplazar el patron. Le doy una buena valoración aunque falta contenido y una mejor expliación de como se utilizan.
+En la página [Rpubs]( http://rpubs.com/ydmarinb/429756) nos habla desde un inicio los puntos básicos y necesarios para entender lo que son las expresiones regulares mencionando que las expresiones regulares se construyen utilizando los operadores unión, concatenación y clausura de kleene(operación que se aplica y representa el conjunto de las cadenas que se pueden formar).Tomando en cuenta los cuantificadores, la alternación, la agrupación, barra invertida, el signo de admiración, meta caracteres especiales; nos da ejemplos de cómo ir implementado en R y al final como reemplazar el patrón. Le doy una buena valoración, aunque falta contenido y una mejor explicación de cómo se utilizan. 
 
-Po otro lado en la otra pagina de [adictos al trabajo web](https://www.adictosaltrabajo.com/2015/01/29/regexsam/) podemos observar a diferencia que la primera, esta tiene una manera basica y siemple de entender y de usar las expresiones; dando una breve introducción del uso por lo cual muestra una lista muy completa de elementos basicos para la creacion de las expresiones regulares.
+Por otro lado en la otra página de [adictos al trabajo web](https://www.adictosaltrabajo.com/2015/01/29/regexsam/) podemos observar a diferencia que la primera, esta tiene una manera básica y simple de entender y de usar las expresiones; dando una breve introducción del uso por lo cual muestra una lista muy completa de elementos básicos para la creación de las expresiones regulares.
 
 <div/> 
 </details>
 
-### Contenido de las paginas de Expresiones Regulares 
+### Contenido de las páginas de Expresiones Regulares 
 
 <details>
 <summary>"<span style="color:red">Contenido </span>"</summary>
 
 <div style="text-align: justify">
 
-Las dos paginas tienen puntos muy exactos sobre algunos puntos importantes que se deben de considerar para tomar en cuenta en estas paginas son los siguientes :
+Las dos páginas tienen puntos muy exactos sobre algunos puntos importantes que se deben de considerar para tomar en cuenta en estas páginas son los siguientes:
 
 -Crear una expresión regular 
 -Comprobar textos 
@@ -54,8 +54,8 @@ Las dos paginas tienen puntos muy exactos sobre algunos puntos importantes que s
 -Propiedades de RegExp
 -Expresiones regulares habituales
 
-Le doy una buena valoración a las dos paginas, pero comparando la primera [Rpubs] puedo decir que tiene un gran contenido y buena explicación pero para una persona que tiene mejor entendiemiento sobe R ya que resume muchas cosas y explica en un grado elevado para personan con conocimientos; a su vez [adictos al trabajo] es una pagina basica para que te ayude a entender lo basico y recordarle a las personas que llegaron a entender y a utilizar las expresiones regulares.
-Es por eso que la primera es mejor para los que tienen un minimo de conocimiento de las expresiones y la segunda es de gran apoyo para empezar a aprender o retomar lo que alguna vez se vio y se olvido.
+Le doy una buena valoración a las dos páginas, pero comparando la primera [Rpubs] puedo decir que tiene un gran contenido y buena explicación pero para una persona que tiene mejor entendimiento sobe R ya que resume muchas cosas y explica en un grado elevado para personan con conocimientos; a su vez [adictos al trabajo] es una página básica para que te ayude a entender lo básico y recordarle a las personas que llegaron a entender y a utilizar las expresiones regulares.
+Es por eso que la primera es mejor para los que tienen un mínimo de conocimiento de las expresiones y la segunda es de gran apoyo para empezar a aprender o retomar lo que alguna vez se vio y se olvido.
 
 <div/> 
 </details>
@@ -70,13 +70,13 @@ Es por eso que la primera es mejor para los que tienen un minimo de conocimiento
 Rmarkdown permite la creación de informes estáticos que combinan texto con código y resultados, gráficos incluídos, generados con R. Aprender Rmarkdown implica aprender dos cosas distintas:
 
 Markdown, un formato para escribir documentos simples en modo texto. Tiene la ventaja de ser fácilmente legible por humanos pero, a la vez, procesable programáticamente para volcarlos en otros formatos: pdf, html, etc.
-La integración entre R y markdown
 
-En [R ejemplo](https://www.earthdatascience.org/courses/earth-analytics/document-your-science/intro-to-the-rmarkdown-format-and-knitr/) podemos observar que es un simple tutorial en que te va llevando paso a paso para crear un archivo y lo representara en HTML, en el que se establecen objetivos de aprendizaje basicos, siemples y necesarios para lograr crear informes combinados.
+En [R ejemplo](https://www.earthdatascience.org/courses/earth-analytics/document-your-science/intro-to-the-rmarkdown-format-and-knitr/) podemos observar que es un simple tutorial en que te va llevando paso a paso para crear un archivo y lo representara en HTML, en el que se establecen objetivos de aprendizaje básicos, simples y necesarios para lograr crear informes combinados.
 
-En esta pagina de [rpubs](http://www.rpubs.com/JohanMarin/Rmarkdown)da un breve resumen sobre el uso de el Markdow para poder empezar a crear tu primer archivo, en el cual se tiene un resumen directo sobre que es y se va directo a la estructura de un documento en HTML.
+En esta página de [rpubs](http://www.rpubs.com/JohanMarin/Rmarkdown)da un breve resumen sobre el uso del Markdown para poder empezar a crear tu primer archivo, en el cual se tiene un resumen directo sobre qué es y se va directo a la estructura de un documento en HTML.
 
-La comparacion de estas dos paginas es minima ya que las dos son muy concisas sobre la aplicación de un R markdown, a las doy des doy una gran valoración ya que llevan un buen orden sobre el como ir aplicando para poder realizar un documento, la unica diferencia que puedo encontrar es que en la primera pagina te da al final en ejercicio a realizar para que uno pueda practirar y eso siempre es bueno para tener un mejor entendimiento.
+La comparación de estas dos páginas es mínima ya que las dos son muy concisas sobre la aplicación de un R Markdown, a las doy des doy una gran valoración ya que llevan un buen orden sobre el cómo ir aplicando para poder realizar un documento, la única diferencia que puedo encontrar es que en la primera página te da al final en ejercicio a realizar para que uno pueda practicar y eso siempre es bueno para tener un mejor entendimiento.
+
 
 
 <div/> 
@@ -89,20 +89,28 @@ La comparacion de estas dos paginas es minima ya que las dos son muy concisas so
 <details>
 <summary>"<span style="color:red">Estructura de datos </span>"</summary>
 
-Se va a hacer un analisis de un un conjutno de bases de datos sobre la poblacion mundial 
-```{r}
+Se va a hacer un análisis de un conjunto de bases de datos sobre la población mundial 
+```{r echo= FALSE, warning= FALSE}
+
 Poblacion<- read.csv("Poblacion_mundial.csv", sep = ",")
 library(ggplot2)
 
-ggplot(Poblacion, aes(PopTotal, Time) +
-    geom_point() + 
-    geom_smooth(method="lm", se=F))
-    
+Poblacion2<- read.table( file = "Poblacion_mundial.csv", 
+                  header = TRUE,
+                  sep = ",",
+                  dec = ".",
+                  encoding = "UTF-8",
+                  stringsAsFactors = FALSE )
+summary(Poblacion)
 
+ggplot(data = Poblacion, aes(x=PopTotal,y= Time)) +
+    geom_point() 
+    
+    
 
 ```
 
-Segun <https://es.wikipedia.org/wiki/Poblaci%C3%B3n_mundial> la poblacion mundial va en aumento y segun las estimaciones de la ONU el año 2008, cada minuto nacen entre 323 y 358 bebés en todo el mundo y los paises mas poblados por continente son y las ciudades mas pobladas por continente son:
+Según <https://es.wikipedia.org/wiki/Poblaci%C3%B3n_mundial> la población mundial va en aumento y según las estimaciones de la ONU el año 2008, cada minuto nacen entre 323 y 358 bebés en todo el mundo y los países más poblados por continente son y las ciudades más pobladas por continente son:
 
 TABLA
 
@@ -123,15 +131,4 @@ TABLA
 <details>
 <summary>"<span style="color:red">Conclusión </span>"</summary>
 
-Este proyecto final es un pequeño trabajo en el cual demostramos gracias a la herramienta de R Markdow un poco de lo aprendido en la materia de Business Performance en la cual aprendimos expresiones regulares y comandos para poder programar libremente, manejar bases de datos y poder hacer analisis estadisticos impartida por [Carlos J. Gil Bellosta](https://www.linkedin.com/in/carlos-j-gil-bellosta-9b02291/)
-
-
-<details>
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Este proyecto final es un pequeño trabajo en el cual demostramos gracias a la herramienta de R Markdow un poco de lo aprendido en la materia de Business Performance en la cual aprendimos expresiones regulares y comandos para poder programar libremente, manejar bases de datos y poder hacer análisis estadísticos impartida por [Carlos J. Gil Bellosta](https://www.linkedin.com/in/carlos-j-gil-bellosta-9b02291/)
