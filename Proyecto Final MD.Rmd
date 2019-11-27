@@ -1,0 +1,123 @@
+---
+title: "Proyecto Final de Business Performance"
+author: "Rafael Bedolla Guiscafré"
+date: "26/11/2019"
+output:
+   html_document:
+     toc: true                  
+     toc_depth: 5 
+     toc_float:
+       collapsed: false
+       smooth_scroll: true
+--- 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## **Ejericio final**
+
+## Definición de expresiones regulares 
+
+<details>
+<summary>"<span style="color:red">Click para ver definicion de expresiones regulares </span>"</summary>
+
+<div style="text-align: justify">
+
+Las expresiones regulares son una secuencia de caracteres que conforma un patrón de búsqueda. También son conocidas como regex o regexp,3 por su contracción de las palabras inglesas regular expression. Son principalmente utilizadas para la búsqueda de patrones de cadenas de caracteres u operaciones de sustituciones.
+
+En esta sección se van a analizar dos distintas páginas que hablen sobre las expresiones regulares.
+
+En la pagina [Rpubs]( http://rpubs.com/ydmarinb/429756) nos habla desde un inicio los puntos basicos y necesarios para entender lo que son las expresiones regulares mencionando que las expresiones regulares se contruyen utilizando los operadores unión, concatenación y clausira de kleene(operación que se aplica y representa el conjunto de las cadenas que se pueden formar).Tomando en cuenta los cuantificadores, la alternación, la agrupación, barra invertida, el signo de admiración, metacaracteres especiales;nos da ejemplos de como ir implementado en R y al final como reemplazar el patron. Le doy una buena valoración aunque falta contenido y una mejor expliación de como se utilizan.
+
+Po otro lado en la otra pagina de [adictos al trabajo web](https://www.adictosaltrabajo.com/2015/01/29/regexsam/) podemos observar a diferencia que la primera, esta tiene una manera basica y siemple de entender y de usar las expresiones; dando una breve introducción del uso por lo cual muestra una lista muy completa de elementos basicos para la creacion de las expresiones regulares.
+
+<div/> 
+</details>
+
+### Contenido de las paginas de Expresiones Regulares 
+
+<div style="text-align: justify">
+
+Las dos paginas tienen puntos muy exactos sobre algunos puntos importantes que se deben de considerar para tomar en cuenta en estas paginas son los siguientes :
+
+-Crear una expresión regular 
+-Comprobar textos 
+-Caracteres especiales
+-Cuantificadores
+-Modificadores
+-Métodos de Reg Exp
+-Métodos de String
+-Propiedades de RegExp
+-Expresiones regulares habituales
+
+Le doy una buena valoración a las dos paginas, pero comparando la primera [Rpubs] puedo decir que tiene un gran contenido y buena explicación pero para una persona que tiene mejor entendiemiento sobe R ya que resume muchas cosas y explica en un grado elevado para personan con conocimientos; a su vez [adictos al trabajo] es una pagina basica para que te ayude a entender lo basico y recordarle a las personas que llegaron a entender y a utilizar las expresiones regulares.
+Es por eso que la primera es mejor para los que tienen un minimo de conocimiento de las expresiones y la segunda es de gran apoyo para empezar a aprender o retomar lo que alguna vez se vio y se olvido.
+
+<div/> 
+
+## Markdown 
+
+<div style="text-align: justify">
+
+Rmarkdown permite la creación de informes estáticos que combinan texto con código y resultados, gráficos incluídos, generados con R. Aprender Rmarkdown implica aprender dos cosas distintas:
+
+Markdown, un formato para escribir documentos simples en modo texto. Tiene la ventaja de ser fácilmente legible por humanos pero, a la vez, procesable programáticamente para volcarlos en otros formatos: pdf, html, etc.
+La integración entre R y markdown
+
+En [R ejemplo](https://www.earthdatascience.org/courses/earth-analytics/document-your-science/intro-to-the-rmarkdown-format-and-knitr/) podemos observar que es un simple tutorial en que te va llevando paso a paso para crear un archivo y lo representara en HTML, en el que se establecen objetivos de aprendizaje basicos, siemples y necesarios para lograr crear informes combinados.
+
+En esta pagina de [rpubs](http://www.rpubs.com/JohanMarin/Rmarkdown)da un breve resumen sobre el uso de el Markdow para poder empezar a crear tu primer archivo, en el cual se tiene un resumen directo sobre que es y se va directo a la estructura de un documento en HTML.
+
+La comparacion de estas dos paginas es minima ya que las dos son muy concisas sobre la aplicación de un R markdown, a las doy des doy una gran valoración ya que llevan un buen orden sobre el como ir aplicando para poder realizar un documento, la unica diferencia que puedo encontrar es que en la primera pagina te da al final en ejercicio a realizar para que uno pueda practirar y eso siempre es bueno para tener un mejor entendimiento.
+
+
+<div/> 
+
+## Estudio y representación de los datos
+
+### Estructura de los datos a analizar 
+
+Se va a hacer un analisis de un un conjutno de bases de datos sobre la poblacion mundial 
+```{r}
+Poblacion<- read.csv("Poblacion_mundial.csv", sep = ",")
+library(ggplot2)
+head(Poblacion)
+ggplot(Poblacion)
+
+```
+
+Segun <https://es.wikipedia.org/wiki/Poblaci%C3%B3n_mundial> la poblacion mundial va en aumento y segun las estimaciones de la ONU el año 2008, cada minuto nacen entre 323 y 358 bebés en todo el mundo y los paises mas poblados por continente son y las ciudades mas pobladas por continente son:
+
+
+
+
+
+![Población](https://www.lavanguardia.com/r/GODO/LV/p4/WebPrint/2017/05/07/DIN03A07_CAS.jpg)
+
+
+
+
+
+
+
+
+
+
+
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
