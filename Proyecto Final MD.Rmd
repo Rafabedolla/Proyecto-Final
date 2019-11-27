@@ -20,7 +20,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Definición de expresiones regulares 
 
 <details>
-<summary>"<span style="color:red">Click para ver definicion de expresiones regulares </span>"</summary>
+<summary>"<span style="color:red">Expresiones regulares </span>"</summary>
 
 <div style="text-align: justify">
 
@@ -36,6 +36,9 @@ Po otro lado en la otra pagina de [adictos al trabajo web](https://www.adictosal
 </details>
 
 ### Contenido de las paginas de Expresiones Regulares 
+
+<details>
+<summary>"<span style="color:red">Contenido </span>"</summary>
 
 <div style="text-align: justify">
 
@@ -55,8 +58,12 @@ Le doy una buena valoración a las dos paginas, pero comparando la primera [Rpub
 Es por eso que la primera es mejor para los que tienen un minimo de conocimiento de las expresiones y la segunda es de gran apoyo para empezar a aprender o retomar lo que alguna vez se vio y se olvido.
 
 <div/> 
+</details>
 
 ## Markdown 
+
+<details>
+<summary>"<span style="color:red">Markdown </span>"</summary>
 
 <div style="text-align: justify">
 
@@ -73,22 +80,31 @@ La comparacion de estas dos paginas es minima ya que las dos son muy concisas so
 
 
 <div/> 
+</details>
 
 ## Estudio y representación de los datos
 
 ### Estructura de los datos a analizar 
 
+<details>
+<summary>"<span style="color:red">Estructura de datos </span>"</summary>
+
 Se va a hacer un analisis de un un conjutno de bases de datos sobre la poblacion mundial 
 ```{r}
 Poblacion<- read.csv("Poblacion_mundial.csv", sep = ",")
 library(ggplot2)
-head(Poblacion)
-ggplot(Poblacion)
+
+ggplot(Poblacion, aes(PopTotal, Time) +
+    geom_point() + 
+    geom_smooth(method="lm", se=F))
+    
+
 
 ```
 
 Segun <https://es.wikipedia.org/wiki/Poblaci%C3%B3n_mundial> la poblacion mundial va en aumento y segun las estimaciones de la ONU el año 2008, cada minuto nacen entre 323 y 358 bebés en todo el mundo y los paises mas poblados por continente son y las ciudades mas pobladas por continente son:
 
+TABLA
 
 
 
@@ -97,22 +113,20 @@ Segun <https://es.wikipedia.org/wiki/Poblaci%C3%B3n_mundial> la poblacion mundia
 
 
 
+<details>
 
 
 
 
+## Conclusión 
+
+<details>
+<summary>"<span style="color:red">Conclusión </span>"</summary>
+
+Este proyecto final es un pequeño trabajo en el cual demostramos gracias a la herramienta de R Markdow un poco de lo aprendido en la materia de Business Performance en la cual aprendimos expresiones regulares y comandos para poder programar libremente, manejar bases de datos y poder hacer analisis estadisticos impartida por [Carlos J. Gil Bellosta](https://www.linkedin.com/in/carlos-j-gil-bellosta-9b02291/)
 
 
-
-
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
+<details>
 
 You can also embed plots, for example:
 
