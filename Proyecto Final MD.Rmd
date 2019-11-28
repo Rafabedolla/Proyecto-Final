@@ -20,7 +20,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Definición de expresiones regulares 
 
 <details>
-<summary>"<span style="color:red">Expresiones regulares </span>"</summary>
+<summary>"<span style="color:blue">Expresiones regulares </span>"</summary>
 
 <div style="text-align: justify">
 
@@ -38,23 +38,23 @@ Por otro lado en la otra página de [adictos al trabajo web](https://www.adictos
 ### Contenido de las páginas de Expresiones Regulares 
 
 <details>
-<summary>"<span style="color:red">Contenido </span>"</summary>
+<summary>"<span style="color:blue">Contenido </span>"</summary>
 
 <div style="text-align: justify">
 
 Las dos páginas tienen puntos muy exactos sobre algunos puntos importantes que se deben de considerar para tomar en cuenta en estas páginas son los siguientes:
 
--Crear una expresión regular 
--Comprobar textos 
--Caracteres especiales
--Cuantificadores
--Modificadores
--Métodos de Reg Exp
--Métodos de String
--Propiedades de RegExp
--Expresiones regulares habituales
+- Crear una expresión regular 
+- Comprobar textos 
+- Caracteres especiales
+- Cuantificadores
+- Modificadores
+- Métodos de Reg Exp
+- Métodos de String
+- Propiedades de RegExp
+- Expresiones regulares habituales
 
-Le doy una buena valoración a las dos páginas, pero comparando la primera [Rpubs] puedo decir que tiene un gran contenido y buena explicación pero para una persona que tiene mejor entendimiento sobe R ya que resume muchas cosas y explica en un grado elevado para personan con conocimientos; a su vez [adictos al trabajo] es una página básica para que te ayude a entender lo básico y recordarle a las personas que llegaron a entender y a utilizar las expresiones regulares.
+Le doy una buena valoración a las dos páginas, pero comparando la primera [Rpubs]( http://rpubs.com/ydmarinb/429756) puedo decir que tiene un gran contenido y buena explicación pero para una persona que tiene mejor entendimiento sobe R ya que resume muchas cosas y explica en un grado elevado para personan con conocimientos; a su vez [adictos al trabajo web](https://www.adictosaltrabajo.com/2015/01/29/regexsam/) es una página básica para que te ayude a entender lo básico y recordarle a las personas que llegaron a entender y a utilizar las expresiones regulares.
 Es por eso que la primera es mejor para los que tienen un mínimo de conocimiento de las expresiones y la segunda es de gran apoyo para empezar a aprender o retomar lo que alguna vez se vio y se olvido.
 
 <div/> 
@@ -63,7 +63,7 @@ Es por eso que la primera es mejor para los que tienen un mínimo de conocimient
 ## Markdown 
 
 <details>
-<summary>"<span style="color:red">Markdown </span>"</summary>
+<summary>"<span style="color:blue">Markdown </span>"</summary>
 
 <div style="text-align: justify">
 
@@ -73,7 +73,7 @@ Markdown, un formato para escribir documentos simples en modo texto. Tiene la ve
 
 En [R ejemplo](https://www.earthdatascience.org/courses/earth-analytics/document-your-science/intro-to-the-rmarkdown-format-and-knitr/) podemos observar que es un simple tutorial en que te va llevando paso a paso para crear un archivo y lo representara en HTML, en el que se establecen objetivos de aprendizaje básicos, simples y necesarios para lograr crear informes combinados.
 
-En esta página de [rpubs](http://www.rpubs.com/JohanMarin/Rmarkdown)da un breve resumen sobre el uso del Markdown para poder empezar a crear tu primer archivo, en el cual se tiene un resumen directo sobre qué es y se va directo a la estructura de un documento en HTML.
+En esta página de [rpubs](http://www.rpubs.com/JohanMarin/Rmarkdown) da un breve resumen sobre el uso del Markdown para poder empezar a crear tu primer archivo, en el cual se tiene un resumen directo sobre qué es y se va directo a la estructura de un documento en HTML.
 
 La comparación de estas dos páginas es mínima ya que las dos son muy concisas sobre la aplicación de un R Markdown, a las doy des doy una gran valoración ya que llevan un buen orden sobre el cómo ir aplicando para poder realizar un documento, la única diferencia que puedo encontrar es que en la primera página te da al final en ejercicio a realizar para que uno pueda practicar y eso siempre es bueno para tener un mejor entendimiento.
 
@@ -87,48 +87,74 @@ La comparación de estas dos páginas es mínima ya que las dos son muy concisas
 ### Estructura de los datos a analizar 
 
 <details>
-<summary>"<span style="color:red">Estructura de datos </span>"</summary>
+<summary>"<span style="color:blue">Estructura de datos </span>"</summary>
 
-Se va a hacer un análisis de un conjunto de bases de datos sobre la población mundial 
-```{r echo= FALSE, warning= FALSE}
+Se van a mostrar diferentes ejemplos de diferentes datos que se analizaron 
 
-Poblacion<- read.csv("Poblacion_mundial.csv", sep = ",")
-library(ggplot2)
+<div style="text-align: justify">
 
-Poblacion2<- read.table( file = "Poblacion_mundial.csv", 
-                  header = TRUE,
-                  sep = ",",
-                  dec = ".",
-                  encoding = "UTF-8",
-                  stringsAsFactors = FALSE )
-summary(Poblacion)
-
-ggplot(data = Poblacion, aes(x=PopTotal,y= Time)) +
-    geom_point() 
-    
-    
-
-```
+En el primer ejemplo podemos observar que:
 
 Según <https://es.wikipedia.org/wiki/Poblaci%C3%B3n_mundial> la población mundial va en aumento y según las estimaciones de la ONU el año 2008, cada minuto nacen entre 323 y 358 bebés en todo el mundo y los países más poblados por continente son y las ciudades más pobladas por continente son:
 
-TABLA
+
+```{r echo = FALSE, include = FALSE, poblacion}
+library(rvest)
+url.poblacion3 <- "https://es.wikipedia.org/wiki/Poblaci%C3%B3n_mundial"
+pop <- read_html(url.poblacion3)
+pop <- html_nodes(pop,"table")
+length(pop)
+sapply(pop, class)
+sapply(pop, function(x) dim(html_table(x, fill= TRUE)))
+
+personas <- html_table(pop[[1]])
+colnames(personas)[4] <- "Poblacion_2019"
+
+head(personas)
+print(personas)
+
+```
+```{r echo = FALSE , warning= FALSE, personas}
+library(knitr)
+kable(head(personas))
+
+```
 
 
+<div style="text-align: justify">
 
+En este segundo ejemplo se puede observar la imagen de un mapa con la Poblacion mundial publicada en un [articulo](https://www.lavanguardia.com/economia/20170506/422335535562/el-mundo-crece-en-las-ciudades.html) el cual menciona que el 54,5% de la población mundial ya vive en las ciudades, y llega al 75% en Europa y al 82% en Estados Unidosy la acumulacion respectiva de los paises mas importantes de cada continente. 
 
 ![Población](https://www.lavanguardia.com/r/GODO/LV/p4/WebPrint/2017/05/07/DIN03A07_CAS.jpg)
 
+<div style="text-align: justify">
+En este tercer ejemplo podemos observar que se hizo un analisis mediante una grafica 
+Estos datos proporcionan aceleraciones máximas medidas en varias estaciones de observación para 23 terremotos en California. 
 
 
-<details>
+```{r, echo=FALSE}
+library(ggplot2)
+library(reshape2)
+p <- ggplot(attenu,aes(x = attenu$event , y = attenu$dist, colour = mag)) + geom_point()+
+  geom_smooth(method="lm", se=F) +
+  labs(title = "Distancia en la aceleracion del suelo por los terremotos",
+       x = "23 terremotos", 
+       y = "Distancia ", 
+       colour = "Magnitud del terremoto" )+
+  theme_minimal()
+p
+```
+
+Esta grafica se puede utilizar para estimar el efecto atenuador de la distancia en la aceleración del suelo mediante los 23 terremotos sucedidos y el grado de magnitud que tuvieron
 
 
+<div/> 
+</details> 
 
 
 ## Conclusión 
 
 <details>
-<summary>"<span style="color:red">Conclusión </span>"</summary>
-
+<summary>"<span style="color:blue">Conclusión </span>"</summary>
+<div style="text-align: justify">
 Este proyecto final es un pequeño trabajo en el cual demostramos gracias a la herramienta de R Markdow un poco de lo aprendido en la materia de Business Performance en la cual aprendimos expresiones regulares y comandos para poder programar libremente, manejar bases de datos y poder hacer análisis estadísticos impartida por [Carlos J. Gil Bellosta](https://www.linkedin.com/in/carlos-j-gil-bellosta-9b02291/)
